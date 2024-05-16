@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .then(data => {
             const nivelAguaDiv = document.getElementById('nivel-agua');
-            if (data && data.field2) {
-                nivelAguaDiv.textContent = `Nível da água: ${data.field2} cm`;
+            if (data && data.nivel_agua) {
+                nivelAguaDiv.textContent = `Nível da água: ${data.nivel_agua} cm`;
             } else {
                 nivelAguaDiv.textContent = 'Erro ao carregar os dados. Dados incompletos ou mal formatados.';
             }
