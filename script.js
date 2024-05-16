@@ -21,8 +21,11 @@ function loadData() {
             const nivelAguaSaoGoncaloDiv = document.getElementById('nivel-agua-sao-goncalo');
             const nivelAguaLagoaDosPatosDiv = document.getElementById('nivel-agua-lagoa-dos-patos');
 
-            if (data && data.nivel_agua_sao_goncalo) {
-                nivelAguaSaoGoncaloDiv.textContent = `Nível da água: ${data.nivel_agua_sao_goncalo} cm`;
+            // Adicionando 9 cm ao nível da água do São Gonçalo antes de exibir
+            let nivelAguaSaoGoncalo = data.nivel_agua_sao_goncalo ? parseInt(data.nivel_agua_sao_goncalo) + 9 : null;
+
+            if (nivelAguaSaoGoncalo) {
+                nivelAguaSaoGoncaloDiv.textContent = `Nível da água: ${nivelAguaSaoGoncalo} cm`;
             } else {
                 nivelAguaSaoGoncaloDiv.textContent = 'Erro ao carregar os dados. Dados incompletos ou mal formatados para São Gonçalo.';
             }
