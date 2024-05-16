@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(function() {
         console.log("Recarregando a página para atualizar os dados...");
         window.location.reload(true);  // Força a recarga da página limpando o cache
-    }, 1800000);  // 1800000 milissegundos = 30 minutos
+    }, 10000);  // 10000 milissegundos = 10 segundos
 });
 
 function loadData() {
