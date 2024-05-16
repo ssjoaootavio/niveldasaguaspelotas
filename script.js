@@ -1,15 +1,21 @@
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('nivel_agua.json')
-        .then(response => response.json())
+    fetch('nivel_agua.json')  // Certifique-se de que o caminho está correto
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok: ' + response.statusText);
+            }
+            return response.json();
+        })
         .then(data => {
             const nivelAguaDiv = document.getElementById('nivel-agua');
-            if (data.field2) {
+            if (data && data.field2) {
                 nivelAguaDiv.textContent = `Nível da água: ${data.field2} cm`;
             } else {
-                nivelAguaDiv.textContent = 'Erro ao carregar os dados.';
+                nivelAguaDiv.textContent = 'Erro ao carregar os dados. Dados incompletos ou mal formatados.';
             }
         })
         .catch(error => {
+            console.error('Fetch error:', error);
             const nivelAguaDiv = document.getElementById('nivel-agua');
             nivelAguaDiv.textContent = 'Erro ao carregar os dados. ' + error.message;
         });
