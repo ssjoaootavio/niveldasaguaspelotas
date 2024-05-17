@@ -23,38 +23,19 @@ h1 {
     margin-bottom: 10px; /* Espaço reduzido abaixo do título */
 }
 
-/* Estilo para o alerta de observação */
-span { /* Corrigido o erro de digitação de 'spam' para 'span' */
-    display: block; /* Faz o span se comportar como um bloco */
-    background-color: #ffcc00; /* Fundo amarelo para destacar */
-    color: #000; /* Texto preto para contraste */
-    padding: 5px 10px;
-    margin-bottom: 5px; /* Reduzido para melhor agrupamento com o link */
-    border-radius: 5px; /* Bordas arredondadas */
-    font-weight: bold; /* Texto em negrito */
-}
-
-/* Estilo para a data da última atualização */
-#lastUpdated {
-    font-size: 0.9em; /* Tamanho um pouco maior */
-    color: gray;
-    font-weight: bold; /* Negrito para destacar */
-    margin-bottom: 20px; /* Espaço abaixo da data de atualização */
-}
-
-p {
-    color: #333; /* Cor do texto */
-    margin-bottom: 20px; /* Espaço abaixo do parágrafo */
+span, p {
+    display: block;
+    margin-bottom: 10px;
 }
 
 a {
-    color: #007BFF; /* Cor azul para links */
-    text-decoration: none; /* Remove o sublinhado padrão de links */
-    font-weight: bold; /* Texto em negrito */
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 a:hover {
-    text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse para melhor interatividade */
+    text-decoration: underline;
 }
 
 .card {
@@ -71,22 +52,33 @@ a:hover {
     justify-content: center;
 }
 
-.card h2 {
+.card h2, .card label, .card h3 {
     color: #024959;
-    margin: 10px 0 20px;
 }
 
-.card div {
-    font-size: 24px;
-    font-weight: bold;
-    color: #007BFF;
-    margin: 10px 0;
-    width: 100%;
+.mini-card-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
-.card a {
-    margin-top: 10px;
-    display: block;
+.mini-card {
+    flex: 1;
+    padding: 10px;
+    background-color: #f8f8f8; /* Fundo levemente diferente para destacar */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.mini-card label {
+    font-size: 14px;
+    color: #666;
+}
+
+.mini-card h3 {
+    font-size: 20px;
+    margin-top: 5px;
+    color: #007BFF; /* Cor para dar destaque ao valor */
 }
 
 .observations {
