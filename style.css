@@ -88,6 +88,28 @@ a:hover {
     text-align: justify;
 }
 
+.current-level-card {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #e8f0fe; /* Fundo azul claro para destaque */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.current-level-card label {
+    font-size: 16px;
+    color: #024959; /* Cor escura para o título */
+}
+
+.current-level-card h3 {
+    font-size: 24px;
+    margin: 0;
+    color: #007BFF; /* Cor azul para dar destaque ao valor */
+}
+
 @media (max-width: 600px) {
     .card {
         width: 90%;
