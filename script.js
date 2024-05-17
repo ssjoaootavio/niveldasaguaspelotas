@@ -21,7 +21,12 @@ function loadData() {
             const nivelAguaLagoaDosPatosDiv = document.getElementById('nivel-agua-lagoa-dos-patos');
 
             if (data.last_updated) {
-                lastUpdatedDiv.textContent = `Última atualização: ${new Date(data.last_updated).toLocaleString('pt-BR')}`;
+                const options = {
+                    timeZone: 'America/Sao_Paulo',
+                    year: 'numeric', month: 'long', day: 'numeric',
+                    hour: '2-digit', minute: '2-digit', second: '2-digit'
+                };
+                lastUpdatedDiv.textContent = `Última atualização: ${new Date(data.last_updated).toLocaleString('pt-BR', options)}`;
             } else {
                 lastUpdatedDiv.textContent = 'Última atualização: Dados não disponíveis.';
             }
