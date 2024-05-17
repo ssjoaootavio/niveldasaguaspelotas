@@ -24,12 +24,12 @@ h1 {
 }
 
 /* Estilo para o alerta de observação */
-span { /* Correção do erro de digitação de 'spam' para 'span' */
+span { /* Corrigido o erro de digitação de 'spam' para 'span' */
     display: block; /* Faz o span se comportar como um bloco */
     background-color: #ffcc00; /* Fundo amarelo para destacar */
     color: #000; /* Texto preto para contraste */
     padding: 5px 10px;
-    margin-bottom: 20px; /* Espaço abaixo do alerta */
+    margin-bottom: 5px; /* Reduzido para melhor agrupamento com o link */
     border-radius: 5px; /* Bordas arredondadas */
     font-weight: bold; /* Texto em negrito */
 }
@@ -40,6 +40,21 @@ span { /* Correção do erro de digitação de 'spam' para 'span' */
     color: gray;
     font-weight: bold; /* Negrito para destacar */
     margin-bottom: 20px; /* Espaço abaixo da data de atualização */
+}
+
+p {
+    color: #333; /* Cor do texto */
+    margin-bottom: 20px; /* Espaço abaixo do parágrafo */
+}
+
+a {
+    color: #007BFF; /* Cor azul para links */
+    text-decoration: none; /* Remove o sublinhado padrão de links */
+    font-weight: bold; /* Texto em negrito */
+}
+
+a:hover {
+    text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse para melhor interatividade */
 }
 
 .card {
@@ -70,15 +85,8 @@ span { /* Correção do erro de digitação de 'spam' para 'span' */
 }
 
 .card a {
-    color: #007BFF;
-    text-decoration: none;
-    font-weight: bold;
     margin-top: 10px;
     display: block;
-}
-
-.card a:hover {
-    text-decoration: underline;
 }
 
 .observations {
