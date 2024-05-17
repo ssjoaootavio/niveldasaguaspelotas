@@ -20,7 +20,26 @@ body {
 
 h1 {
     color: #0056b3;
-    margin-bottom: 30px;
+    margin-bottom: 10px; /* Espaço reduzido abaixo do título */
+}
+
+/* Estilo para o alerta de observação */
+span { /* Correção do erro de digitação de 'spam' para 'span' */
+    display: block; /* Faz o span se comportar como um bloco */
+    background-color: #ffcc00; /* Fundo amarelo para destacar */
+    color: #000; /* Texto preto para contraste */
+    padding: 5px 10px;
+    margin-bottom: 20px; /* Espaço abaixo do alerta */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Estilo para a data da última atualização */
+#lastUpdated {
+    font-size: 0.9em; /* Tamanho um pouco maior */
+    color: gray;
+    font-weight: bold; /* Negrito para destacar */
+    margin-bottom: 20px; /* Espaço abaixo da data de atualização */
 }
 
 .card {
