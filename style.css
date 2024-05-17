@@ -112,6 +112,16 @@ a:hover {
     text-align: justify;
 }
 
+.alert-span { /* Classe específica para spans de alerta */
+    display: block; /* Faz o span se comportar como um bloco */
+    background-color: #ffcc00; /* Fundo amarelo para destacar */
+    color: #000; /* Texto preto para contraste */
+    padding: 5px 10px;
+    margin-bottom: 10px; /* Espaço abaixo do alerta */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-weight: bold; /* Texto em negrito */
+}
+
 @media (max-width: 600px) {
     .card {
         width: 90%;
